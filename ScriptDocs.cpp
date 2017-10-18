@@ -441,7 +441,7 @@ void ScriptDocs::WriteTypedef(asITypeInfo* typedefType)
 	BeginNamespace(typedefType->GetNamespace());
 	WriteHeader(typedefType->GetUserData(AS_DOCS_USERDATA), false);
 	m_stream << GetIndent() << "typedef " << GetTypeName(typedefType->GetTypedefTypeId());
-	m_stream << " " << typedefType->GetName() << ";";
+	m_stream << " " << typedefType->GetName() << ";" << std::endl;
 }
 
 void ScriptDocs::WriteGlobalFunction(asIScriptFunction* func)
